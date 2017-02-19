@@ -22,7 +22,6 @@ RUN apt-get -qy install postgresql
 RUN apt-get -qy install python
 RUN apt-get -qy install python-pip
 RUN apt-get -qy install sed
-RUN apt-get -qy install awk 
 RUN apt-get -qy install sysstat
 RUN apt-get -qy install tmux 
 RUN apt-get -qy install unzip 

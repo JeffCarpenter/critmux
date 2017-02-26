@@ -34,7 +34,7 @@ RUN apt-get -qy install zsh
 RUN mkdir /src
 WORKDIR /src
 
-ENV CRIU 2.11
+ENV CRIU 2.11.1
 RUN curl http://download.openvz.org/criu/criu-$CRIU.tar.bz2 | tar -jxf-
 RUN make -C criu-$CRIU
 RUN cp criu-$CRIU/criu /usr/local/sbin

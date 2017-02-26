@@ -4,6 +4,7 @@ RUN apt-get -q update
 
 RUN apt-get -qy install bsdmainutils
 RUN apt-get -qy install build-essential
+RUN apt-get -qy install cmake
 RUN apt-get -qy install curl
 RUN apt-get -qy install libprotobuf-c0-dev
 RUN apt-get -qy install linux-headers-generic
@@ -20,6 +21,7 @@ RUN apt-get -qy install jq
 RUN apt-get -qy install make
 RUN apt-get -qy install postgresql
 RUN apt-get -qy install python
+RUN apt-get -qy install python-dev
 RUN apt-get -qy install python-pip
 RUN apt-get -qy install sed
 RUN apt-get -qy install sysstat

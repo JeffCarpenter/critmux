@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:17.04
 
 RUN apt-get -q update
 
@@ -34,7 +34,7 @@ RUN apt-get -qy install zsh
 RUN mkdir /src
 WORKDIR /src
 
-ENV CRIU 1.2
+ENV CRIU 2.11
 RUN curl http://download.openvz.org/criu/criu-$CRIU.tar.bz2 | tar -jxf-
 RUN make -C criu-$CRIU
 RUN cp criu-$CRIU/criu /usr/local/sbin

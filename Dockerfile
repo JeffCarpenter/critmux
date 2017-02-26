@@ -1,7 +1,10 @@
 FROM ubuntu:17.04
 
+ENV TERM xterm-256color
+
 RUN apt-get -q update
 
+RUN apt-get -qy install apt-utils
 RUN apt-get -qy install bsdmainutils
 RUN apt-get -qy install build-essential
 RUN apt-get -qy install cmake
@@ -15,6 +18,7 @@ RUN apt-get -qy install bc
 RUN apt-get -qy install bridge-utils
 RUN apt-get -qy install curl
 RUN apt-get -qy install docker
+RUN apt-get -qy install gcc
 RUN apt-get -qy install git
 RUN apt-get -qy install htop
 RUN apt-get -qy install jq

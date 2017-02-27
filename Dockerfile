@@ -49,8 +49,9 @@ RUN apt-get -qy install wget
 RUN apt-get -qy install zsh
 
 RUN curl -SL https://github.com/xemul/criu/archive/v$CRIU.tar.gz | tar xvz-
-RUN make -C criu-$CRIU
-RUN cp -r criu-$CRIU/criu /usr/local/sbin
+RUN cd criu-$CRIU && \
+        make && \
+        make install-criu
 
 ADD wrapper /usr/local/sbin/
 CMD ["wrapper"]

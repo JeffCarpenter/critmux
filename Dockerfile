@@ -19,17 +19,22 @@ RUN apt-get -qy install curl
 RUN apt-get -qy install docker
 RUN apt-get -qy install gcc
 RUN apt-get -qy install git
+RUN apt-get -qy install golang
 RUN apt-get -qy install htop
 RUN apt-get -qy install jq
 RUN apt-get -qy install libaio-dev
 RUN apt-get -qy install libcap-dev
+RUN apt-get -qy install libncurses5-dev 
 RUN apt-get -qy install libnet-dev
 RUN apt-get -qy install libnl-3-dev
 RUN apt-get -qy install libprotobuf-c0-dev
 RUN apt-get -qy install libprotobuf-c0-dev
 RUN apt-get -qy install libprotobuf-dev
+RUN apt-get -qy install libreadline6-dev 
 RUN apt-get -qy install linux-headers-generic
 RUN apt-get -qy install make
+RUN apt-get -qy install mono-xbuild 
+RUN apt-get -qy install npm 
 RUN apt-get -qy install pkg-config
 RUN apt-get -qy install postgresql
 RUN apt-get -qy install protobuf-c-compiler
@@ -44,7 +49,6 @@ RUN apt-get -qy install sysstat
 RUN apt-get -qy install tmux
 RUN apt-get -qy install tmux 
 RUN apt-get -qy install unzip 
-RUN apt-get -qy install vim
 RUN apt-get -qy install wget
 RUN apt-get -qy install zsh
 

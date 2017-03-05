@@ -28,7 +28,6 @@ RUN apt-get -qy install libncurses5-dev
 RUN apt-get -qy install libnet-dev
 RUN apt-get -qy install libnl-3-dev
 RUN apt-get -qy install libprotobuf-c0-dev
-RUN apt-get -qy install libprotobuf-c0-dev
 RUN apt-get -qy install libprotobuf-dev
 RUN apt-get -qy install libreadline6-dev 
 RUN apt-get -qy install linux-headers-generic

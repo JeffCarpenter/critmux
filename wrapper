@@ -10,8 +10,8 @@ def system(cmd):
 
 signal.signal(signal.SIGTERM, lambda signum, frame: system("tmux detach"))
 
-if os.path.isdir("/state"):
-	system("criu restore --images-dir /state --restore-detached")
+if os.path.isdir("state"):
+	system("sudo criu restore --images-dir state --restore-detached")
 	system("tmux attach")
 else:
 	system("tmux")
@@ -23,8 +23,8 @@ except:
 if pid:
 	pid = pid.decode("ascii").strip()
 	print("Found TMUX. Freezing state.")
-	system("rm -rf /state")
-	os.mkdir("/state")
-	system("criu dump --tree {} --images-dir /state".format(pid))
+	system("rm -rf state")
+	os.mkdir("state")
+	system("sudo criu dump --tree {} --images-dir state".format(pid))
 else:
 	print("No TMUX found. Doing nothing.")
